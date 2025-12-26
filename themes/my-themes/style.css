@@ -1,0 +1,700 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background: #c0392b;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #a93226;
+}
+
+
+.swiper-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.swiper-visual .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.visual-text {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 90%;
+}
+
+.visual-text .primary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.visual-text .secondary {
+    font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+}
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+    background: #f5f5f5;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.header-top .clinic-name {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.header-top .appointment-button {
+    background: #0073aa;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main-navigation .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-navigation .logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0073aa;
+}
+.news-section {
+    background-color: #fff8ec;
+    border-radius: 15px;
+    padding: 30px 40px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.news-section .title {
+    font-size: 14px;
+    color: #c5b7a3;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.news-section h2 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+    color: #4a3b2f;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5dcca;
+    flex-wrap: wrap; 
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    width: 130px;
+    color: #7a6a5a;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.news-content {
+    color: #4a3b2f;
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1; 
+}
+
+.news-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid #f7c6a3;
+    border-radius: 50px;
+    color: #f7c6a3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.news-button:hover {
+    background-color: #f7c6a3;
+    color: #fff;
+}
+
+.instagram-btn {
+    display: flex;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    width: 40%;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    align-items: center;
+    gap: 10px;
+    margin: 60px auto 0 auto; 
+}
+
+
+.instagram-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+.news-section {
+    padding: 20px 25px;
+}
+
+.news-section h2 {
+    font-size: 28px;
+}
+
+.news-list li {
+    flex-direction: column; 
+}
+
+.news-date {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.news-content {
+    font-size: 15px;
+}
+
+.news-button {
+    padding: 8px 20px;
+}
+
+.instagram-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+.instagram-btn img {
+    width: 20px;
+    height: 20px;
+}
+}
+
+
+.strengths {
+    background-color: #fff8ec;
+    padding: 80px 20px;
+    margin-top: 50px;
+}
+
+.strengths-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    text-align: center;
+    
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #4a4a4a;
+}
+
+
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.strength-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strength-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.strength-card .icon {
+    font-size: 36px;
+    color: #c5a36a;
+    margin-bottom: 20px;
+}
+
+.strength-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.strength-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+.strength-card .note {
+    font-size: 12px;
+    color: #999;
+}
+
+.strength-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 10px 22px;
+    background-color: #c5a36a;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 767px) {
+
+.strengths {
+    padding: 50px 15px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* 1 column */
+.strengths-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.strength-card {
+    padding: 25px 18px;
+}
+
+.strength-card .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.strength-card h3 {
+    font-size: 16px;
+}
+
+.strength-card p {
+    font-size: 13px;
+}
+
+.strength-card .note {
+    font-size: 11px;
+}
+
+.strength-card a {
+    font-size: 13px;
+    margin-top: 15px;
+}
+}
+.form{
+    background-color: #0073aa;
+    padding: 70px;
+}
+
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+  font-family: 'Georgia', serif;
+  color: #4d4d4d;
+  background: white;
+}
+
+.text-section {
+  max-width: 100%;
+}
+
+.message-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b39b89;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.headline {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  color: #d9a94a; 
+}
+
+.headline span {
+  color: #bfa291; 
+  font-weight: 400;
+}
+
+.headline strong {
+  color: #1c120e; 
+}
+
+.paragraph {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #5b5149;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #f5b18d;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid #f5b18d;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #f5b18d;
+  color: white;
+  outline: none;
+}
+
+.photo-section {
+  background: #fff8e7;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 320px;
+  align-self: center;
+}
+
+.photo-section img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.photo-caption {
+  font-size: 0.9rem;
+  color: #312d2a;
+  text-align: center;
+}
+
+.photo-caption strong {
+  font-weight: 600;
+}
+
+
+@media (min-width: 768px) {
+.form-box {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 80px auto;
+}
+
+.text-section {
+  max-width: 55%;
+  margin-top: 50px;
+}
+
+.headline {
+  font-size: 2.2rem;
+}
+
+.paragraph {
+  font-size: 1rem;
+}
+
+.photo-section {
+  max-width: 40%;
+  align-self: flex-start;
+}
+
+.photo-caption {
+  text-align: left;
+}
+}
+
+.treatment-section {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff8ec;
+    font-family: Arial, sans-serif;
+}
+
+
+.image-sidebar {
+    width: 35%;
+    background: url("http://ohana.test/wp-content/uploads/2025/12/in.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    color: #ffffff;
+    text-align: left;
+}
+
+.header-text .label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.header-text h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+
+.content-area {
+    width: 65%;
+    padding: 80px 60px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card .small-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: -10px;
+}
+
+/* ==============================
+   BUTTON
+================================ */
+.card .btn {
+    margin-top: auto;
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 22px;
+    background-color: #c5b089;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #b39b6c;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   FOOTER LINK
+================================ */
+.footer-link {
+    margin-top: 50px;
+}
+
+.footer-link a {
+    font-size: 14px;
+    color: #8a7a5a;
+    text-decoration: none;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .treatment-section {
+        flex-direction: column;
+    }
+
+    .image-sidebar {
+        width: 100%;
+        height: 240px;
+        padding: 30px;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+    }
+
+    .content-area {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+
+
+
+
