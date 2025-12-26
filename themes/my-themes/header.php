@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head(); ?>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-</head>
+<head><?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/components/nav2.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/components/nav.css">
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/components/header-back.css">
+    <link rel="stylesheet" href="/components/nav2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+</head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+  
+<header>
+<div class="nav__brand"><img src="http://ohana.test/wp-content/uploads/2025/12/Pasted-image.png" alt=""></div>
+<?php wp_nav_menu(['theme_location'=>'primary']); ?>
+</header >
+<nav class="header" >
+
+
+  <!-- <div class="header-left">
+    <a href="<?php echo site_url('/cart-shipping'); ?>"><i class="fa-solid fa-phone icon"></i>
+    </a>
+    <i class="fa-solid fa-moon icon"></i>
+  </div> -->
+
+ 
+
+  </div>
+</nav>
+<main>

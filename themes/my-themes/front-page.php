@@ -10,13 +10,14 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php get_header(); ?>
 
 
 <div id="hero" class="hero-section">
     <div class="hero-overlay"></div> 
 
     <div class="hero-content">
-        <h2><?php _e('患者様お一人おひとりの気持ちを大切に', 'your-text-domain'); ?></h2>
+        <h2><?php _e('Warm medical care that fully acknowledges the feelings of each patient', 'your-text-domain'); ?></h2>
         <p><?php _e('リラックスして不妊治療に臨めるよう丁寧な診療を提供します。', 'your-text-domain'); ?></p>
         <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn-primary">
             <?php _e('お問い合わせ', 'your-text-domain'); ?>
@@ -27,7 +28,7 @@
         <div class="swiper swiper-visual swiper-fade">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="http://ohana.test/wp-content/uploads/2025/12/cllinic-scaled.webp" alt="Clinic 1">
+                    <img src="http://ohana.test/wp-content/uploads/2025/12/11.jpeg" alt="Clinic 1">
                 </div>
                 <div class="swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/visual_02.webp" alt="Clinic 2">
@@ -45,11 +46,11 @@
 
         <div class="visual-text">
             <div class="content">
-                <div class="primary">
-                    <?php _e('ការថែទាំវេជ្ជសាស្រ្តដ៏កក់ក្តៅដែល ទទួលស្គាល់ យ៉ាងពេញលេញ នូវអារម្មណ៍របស់អ្នកជំងឺម្នាក់ៗ', 'your-text-domain'); ?>
+                <div class="primary" >
+                    <?php _e('We will answer your questions thoroughly during your consultation, So', 'your-text-domain'); ?>
                 </div>
                 <div class="secondary">
-                    <?php _e('យើងនឹងឆ្លើយសំណួររបស់អ្នកយ៉ាងហ្មត់ចត់ក្នុងអំឡុងពេលពិគ្រោះយោបល់របស់អ្នក ដូច្នេះ អ្នកអាចចាប់ផ្តើមការព្យាបាលភាពគ្មានកូនរបស់អ្នកក្នុងបរិយាកាសសម្រាកកាយ។', 'your-text-domain'); ?>
+                    <?php _e('you can approach your infertility treatment in a relaxed atmosphere.', 'your-text-domain'); ?>
                 </div>
             </div>
         </div>
@@ -146,8 +147,8 @@
       <a href="#" class="btn">Director introduction &gt;</a>
     </div>
     <div class="photo-section">
-      <img src="http://ohana.test/wp-content/uploads/2025/12/doctor.jpg" alt="Director Yuji Takehara" />
-      <div class="photo-caption">Director <strong>Yuji SeyhaArayaka</strong></div>
+      <img src="http://ohana.test/wp-content/uploads/2025/12/imhaz.jpg" alt="Director Yuji Takehara" />
+      <div class="photo-caption">Director <strong>ImHaz Kakura</strong></div>
     </div>
   </section>
  <section class="treatment-section">
@@ -197,3 +198,5 @@
 
 </body>
 </html>
+
+<?php get_footer(); ?>

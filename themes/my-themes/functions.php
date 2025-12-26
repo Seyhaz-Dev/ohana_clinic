@@ -1,35 +1,65 @@
 <?php
-
-function ohana_enqueue_styles() {
-    wp_enqueue_style(
-        'ohana-style',
-        get_stylesheet_uri(),
-        array(),
-        '1.0'
-    );
+function mytheme_setup() {
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    register_nav_menus([
+        'primary' => 'Primary Menu',
+    ]);
 }
-add_action('wp_enqueue_scripts', 'ohana_enqueue_styles');
+add_action('after_setup_theme', 'mytheme_setup');
 
-
-function ohana_allow_svg_uploads($mimes) {
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
+function mytheme_assets() {
+    wp_enqueue_style('mytheme-style', get_stylesheet_uri());
 }
-add_filter('upload_mimes', 'ohana_allow_svg_uploads');
+add_action('wp_enqueue_scripts', 'mytheme_assets');
 
+function mytheme_register_products() {
+    register_post_type('product', [
+        'labels' => ['name'=>'Products','singular_name'=>'Product'],
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-cart',
+        'supports' => ['title','editor','thumbnail']
+    ]);
+}
+add_action('init','mytheme_register_products');
 
-function ohana_add_font_awesome() {
-    wp_enqueue_style(
-        'font-awesome',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
-        array(),
-        '6.5.1'
-    );
+function mytheme_register_product_category() {
+    register_taxonomy('product_category','product',[
+        'label'=>'Product Categories',
+        'hierarchical'=>true
+    ]);
 }
-add_action('wp_enqueue_scripts', 'ohana_add_font_awesome');
-function theme_enqueue_scripts() {
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
-    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array(), null, true);
-    wp_enqueue_script('theme-swiper', get_template_directory_uri() . '/js/swiper-init.js', array('swiper-js'), null, true);
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('mytheme-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
+});
+
+add_action('init','mytheme_register_product_category');
+
+function mytheme_product_meta() {
+    add_meta_box('product_details','Product Details','mytheme_product_meta_callback','product');
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+add_action('add_meta_boxes','mytheme_product_meta');
+
+function mytheme_product_meta_callback($post){
+    $price=get_post_meta($post->ID,'_price',true);
+    $stock=get_post_meta($post->ID,'_stock',true);
+    ?>
+    <label>Price ($):</label><br>
+    <input type="number" name="price" value="<?php echo esc_attr($price); ?>"><br><br>
+    <label>Stock:</label><br>
+    <input type="number" name="stock" value="<?php echo esc_attr($stock); ?>"><br>
+    <?php
+}
+
+function mytheme_save_product_meta($post_id){
+    if(isset($_POST['price'])) update_post_meta($post_id,'_price',$_POST['price']);
+    if(isset($_POST['stock'])) update_post_meta($post_id,'_stock',$_POST['stock']);
+}
+add_action('save_post','mytheme_save_product_meta');
+
+function my_theme_styles() {
+    wp_enqueue_style('main-style', get_stylesheet_uri());
+}
+add_action('wp_enqueue_scripts', 'my_theme_styles');
+?>
