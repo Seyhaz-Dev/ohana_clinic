@@ -31,10 +31,16 @@
                     <img src="http://ohana.test/wp-content/uploads/2025/12/11.jpeg" alt="Clinic 1">
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/visual_02.webp" alt="Clinic 2">
+                    <img src="http://ohana.test/wp-content/uploads/2025/12/1.webp" alt="Clinic 2">
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/visual_03.webp" alt="Clinic 3">
+                    <img src="http://ohana.test/wp-content/uploads/2025/12/slide04.jpg" alt="Clinic 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://ohana.test/wp-content/uploads/2025/12/gallery_03.webp" alt="Clinic 3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://ohana.test/wp-content/uploads/2025/12/visual_03-scaled.webp" alt="Clinic 3">
                 </div>
             </div>
            
@@ -44,15 +50,7 @@
             <div class="swiper-button-next"></div>
         </div>
 
-        <div class="visual-text">
-            <div class="content">
-                <div class="primary" >
-                    <?php _e('We will answer your questions thoroughly during your consultation, So', 'your-text-domain'); ?>
-                </div>
-                <div class="secondary">
-                    <?php _e('you can approach your infertility treatment in a relaxed atmosphere.', 'your-text-domain'); ?>
-                </div>
-            </div>
+        
         </div>
      
     </div>
@@ -195,6 +193,55 @@
         </div>
     </section>
    
+<section class="gallery-section"
+        <div class="header">
+            <p class="subtitle">GALLERY</p>
+            <h1>Gallery</h1>
+        </div>
+
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="http://ohana.test/wp-content/uploads/2025/12/1.webp" alt="Clinic Lobby">
+            </div>
+            <div class="image-item">
+                <img src="http://ohana.test/wp-content/uploads/2025/12/2.webp" alt="Clinic Rooms">
+            </div>
+        </div>
+
+        <a href="#" class="btn-introduction">
+            Introduction to the hospital <span class="arrow">›</span>
+        </a>
+    </section>
+
+
+
+   
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const swiperVisual = new Swiper('.swiper-visual', {
+    effect: 'fade',           // fade effect
+    loop: true,               // loop slides infinitely
+    autoplay: {
+      delay: 4000,            // 4 seconds per slide
+      disableOnInteraction: false, // continue autoplay after user interaction
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    speed: 1000, // fade speed
+  });
+</script>
 
 </body>
 </html>

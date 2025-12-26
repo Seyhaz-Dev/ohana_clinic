@@ -81,6 +81,7 @@ nav.header {
     color: #ffd700; 
 
 }
+
 .language {
     display: flex;
     align-items: center;
@@ -177,43 +178,95 @@ nav.header {
 }
 
 
+/* Hero Section Container */
+.visual-content {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden;
+}
+
+/* Swiper Container */
 .swiper-visual {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.swiper-visual .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+/* Swiper Slides */
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Slide Images */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill hero section nicely */
+  display: block;
+}
 
+/* Swiper Pagination */
+.swiper-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.7);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
+
+/* Visual Text Overlay */
 .visual-text {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    color: #0a0a0a;
-    text-shadow:  3px 2px 4px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 5;
+  color: #fff;
+  max-width: 500px;
 }
 
 .visual-text .primary {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .visual-text .secondary {
-    font-size: 1rem;
+  font-size: 18px;
+  line-height: 1.5;
 }
+
 
 @media (max-width: 1200px) {
     .hero-content h2 {
@@ -222,7 +275,19 @@ nav.header {
     .hero-content p {
         font-size: 1.3rem;
     }
-}
+    
+  .visual-text {
+    left: 5%;
+    max-width: 90%;
+  }
+  .visual-text .primary {
+    font-size: 28px;
+  }
+  .visual-text .secondary {
+    font-size: 16px;
+  }
+    }
+
 .site-header {
     background: #fff;
     border-bottom: 1px solid #ddd;
@@ -671,7 +736,7 @@ nav.header {
 
 .image-sidebar {
     width: 35%;
-    background: url("http://ohana.test/wp-content/uploads/2025/12/in.jpg") center/cover no-repeat;
+    background: url("http://ohana.test/wp-content/uploads/2025/12/japna.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -738,9 +803,7 @@ nav.header {
     margin-top: -10px;
 }
 
-/* ==============================
-   BUTTON
-================================ */
+
 .card .btn {
     margin-top: auto;
     display: inline-block;
@@ -759,9 +822,6 @@ nav.header {
     transform: translateY(-2px);
 }
 
-/* ==============================
-   FOOTER LINK
-================================ */
 .footer-link {
     margin-top: 50px;
 }
@@ -807,23 +867,20 @@ nav.header {
     }
 }
 
-/* =========================
-   FOOTER – DESKTOP
-========================= */
 
 .site-footer {
   font-family: Arial, sans-serif;
   color: #0b4a7c;
 }
 
-/* Container */
+/
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ===== TOP BAR ===== */
+
 .footer-top {
   background-color: #f3f8fc;
   padding: 50px 0;
@@ -831,11 +888,10 @@ nav.header {
 
 .footer-top-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-/* Social */
 .footer-social h4,
 .footer-newsletter h4 {
   font-size: 18px;
@@ -861,7 +917,7 @@ nav.header {
   font-size: 18px;
 }
 
-/* Newsletter */
+
 .newsletter-form {
   display: flex;
   align-items: center;
@@ -885,9 +941,9 @@ nav.header {
   cursor: pointer;
 }
 
-/* ===== MAIN FOOTER ===== */
+
 .footer-main {
-  padding: 70px 0;
+  padding: 70px 1px 0 90px;
   background-color: #ffffff;
 }
 
@@ -897,13 +953,13 @@ nav.header {
   gap: 50px;
 }
 
-/* Logo */
+
 .footer-brand img {
   max-width: 140px;
   margin-bottom: 15px;
 }
 
-/* Links */
+
 .footer-links h4,
 .footer-contact h4 {
   font-size: 18px;
@@ -924,19 +980,113 @@ nav.header {
   color: #0b4a7c;
 }
 
-/* Contact */
+
 .footer-contact p {
   margin-bottom: 12px;
   line-height: 1.6;
 }
 
-/* ===== BOTTOM BAR ===== */
+
 .footer-bottom {
   background-color: #0b4a7c;
   color: #ffffff;
   text-align: center;
   padding: 18px 10px;
+  margin-top: 60px;
   font-size: 14px;
+}
+
+.gallery-section {
+  background-color: #fff8ec;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+.gallery-section .header .subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #c5b7a3;
+  margin-bottom: 10px;
+}
+
+.gallery-section .header h1 {
+  font-size: 36px;
+  color: #4a4a4a;
+  margin-bottom: 50px;
+}
+
+
+.image-grid {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.image-item {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hover (Desktop) */
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Button */
+.btn-introduction {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background-color: #4cafad;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-introduction .arrow {
+  font-size: 18px;
+}
+
+
+.btn-introduction:hover {
+  background-color: #3c9a99;
+  transform: translateX(5px);
+}
+
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 60px 15px;
+  }
+
+  .gallery-section .header h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .btn-introduction {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
 }
 
 
