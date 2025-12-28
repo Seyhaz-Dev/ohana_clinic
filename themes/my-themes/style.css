@@ -939,7 +939,49 @@ nav.header {
   font-size: 14px;
 }
 
+/*======ABOUT====*/
+.hero img{
+    width:100%;
+}
+.h-philo{
+    text-align: center;
+    align-items: center;
+}
+.h2-text{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+.p-text{
+        align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 90px;
+    font-size: 20px
+}
+.medical-content{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 120px;
+}
+.medical{
+     margin-top: 40px;
+    margin-left: 150px;
+}
+.medical-text{
+   
+    width: 450px;
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 20px
+}
+.medical-imag img{
+    
+    width: 500px;
+    border-radius: 20px;
 
-
-
-
+}
+.first-h h1{
+    text-align: center;
+ justify-content: center;
+}

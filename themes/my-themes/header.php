@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
   
 <header>
-<div class="nav__brand"><img src="http://ohana.test/wp-content/uploads/2025/12/Pasted-image.png" alt=""></div>
+<div class="nav__brand"><img src="http://ohana-clinic.test/wp-content/uploads/2025/12/logo.png" alt=""></div>
 <?php wp_nav_menu(['theme_location'=>'primary']); ?>
 </header >
 <nav class="header" >
