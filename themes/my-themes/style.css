@@ -172,6 +172,58 @@ nav.header {
     font-weight: bold;
     transition: background 0.3s;
 }
+/* Menu Parent */
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Sub-menu */
+.main-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-menu li ul li {
+  width: 200px;
+}
+
+.main-menu li ul li a {
+  padding: 10px 15px;
+  color: #333;
+}
+
+/* Hover Effect */
+.main-menu li:hover > ul {
+  display: block;
+}
+
+.main-menu li a:hover {
+  background: #4cafad;
+  color: #fff;
+}
 
 .btn-primary:hover {
     background: #a93226;
@@ -873,7 +925,7 @@ nav.header {
   color: #0b4a7c;
 }
 
-/
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1128,7 +1180,7 @@ nav.header {
 
 
 .container {
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 80px auto;
   padding: 0 20px;
 }
@@ -1241,6 +1293,7 @@ nav.header {
   }
 
   .container {
+
     margin: 40px auto;
     padding: 0 15px;
   }
@@ -1621,7 +1674,7 @@ nav.header {
   opacity: 0.85;
 }
 
-/
+
 .btn-icon {
   font-size: 18px;
 }
@@ -1880,6 +1933,321 @@ nav.header {
     grid-column: 2 / 3; 
     justify-self: start;
   }
+}
+
+/* =========================
+   ACCESS SECTION
+========================= */
+.access-section {
+  padding: 32px 16px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.access-section .main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.access-section .header-accent {
+  width: 60px;
+  height: 3px;
+  background: #f4c65d;
+  margin: 0 auto 24px;
+}
+
+/* =========================
+   TABLE STYLES
+========================= */
+.access-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: left;
+}
+
+.access-table th,
+.access-table td {
+  padding: 12px 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+.access-table th {
+  width: 120px;
+  font-weight: 600;
+  color: #333;
+}
+
+.access-table td a {
+  color: #4cafad;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.access-table td a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 767px) {
+  .access-table {
+    display: block;
+  }
+
+  .access-table tr {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .access-table th,
+  .access-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 6px 0;
+  }
+
+  .access-table th {
+    font-weight: 700;
+    color: #555;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .access-section {
+    text-align: left;
+    padding: 48px 24px;
+  }
+
+  .access-section .main-title {
+    font-size: 34px;
+  }
+
+  .access-table {
+    font-size: 16px;
+  }
+}
+/* ===== Desktop / Default ===== */
+.directions {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.directions-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #f4c430;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.directions-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.direction-card {
+  flex: 1;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.caption {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #555;
+}
+/* ===== Tablet & Mobile ===== */
+@media (max-width: 768px) {
+  .directions {
+    padding: 30px 15px;
+  }
+
+  .directions-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .directions-wrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .step-number {
+    font-size: 28px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .caption {
+    font-size: 15px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .directions-title {
+    font-size: 22px;
+  }
+
+  .step-number {
+    font-size: 24px;
+  }
+
+  .caption {
+    font-size: 14px;
+  }
+}
+.consultation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.consultation-title {
+  font-size: 36px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #f2c56b;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.consultation-text {
+  margin: 25px 0 40px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.consultation-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.consultation-table th,
+.consultation-table td {
+  border: 1px solid #5b2a1c;
+  padding: 14px 10px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.consultation-table th {
+  background: #fff6ee;
+  font-weight: 600;
+}
+
+.consultation-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.notes {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.notes .red {
+  color: red;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .consultation-title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .consultation-text {
+    font-size: 15px;
+  }
+
+  .consultation-table th,
+  .consultation-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+*======ABOUT====*/
+.hero img{
+    width:100%;
+}
+.h-philo{
+    text-align: center;
+    align-items: center;
+}
+.h2-text{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+.p-text{
+        align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 90px;
+    font-size: 20px
+}
+.medical-content{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 120px;
+}
+.medical{
+     margin-top: 40px;
+    margin-left: 150px;
+}
+.medical-text{
+   
+    width: 450px;
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 20px
+}
+.medical-imag img{
+    
+    width: 500px;
+    border-radius: 20px;
+
+}
+.first-h h1{
+    text-align: center;
+ justify-content: center;
 }
 
 

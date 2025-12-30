@@ -39,6 +39,11 @@ add_action('init','mytheme_register_product_category');
 function mytheme_product_meta() {
     add_meta_box('product_details','Product Details','mytheme_product_meta_callback','product');
 }
+function register_my_menu() {
+    register_nav_menu('primary', 'Primary Menu');
+}
+add_action('after_setup_theme', 'register_my_menu');
+
 add_action('add_meta_boxes','mytheme_product_meta');
 
 function mytheme_product_meta_callback($post){
