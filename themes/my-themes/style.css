@@ -1272,3 +1272,293 @@ nav.header {
 .banner-medical{
     width: 100%;
 }
+/* =========Egg Frezzing======== */
+/* /////////////////////////////////// */
+/* Wrapper */
+.treatment-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #777;
+}
+
+.breadcrumb a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 5px;
+}
+
+.breadcrumb .current {
+  color: #555;
+}
+
+/* Title */
+.page-title h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Sections */
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+/* Lists */
+.section ul,
+.section ol {
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+/* Flow */
+.flow-list li {
+  padding-left: 5px;
+}
+
+/* Notes */
+.note-box {
+  background: #f2f7fb;
+  padding: 20px;
+  border-left: 4px solid #0066cc;
+}
+.banner-egg {
+    width: 100%;
+}
+.cost-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Times New Roman", serif;
+  color: #3b1d0f;
+}
+
+/* Title */
+.cost-title {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.cost-title::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #f5a623;
+  margin-top: 10px;
+}
+
+/* Table */
+.cost-table {
+  border: 1px solid #3b1d0f;
+  margin-bottom: 20px;
+}
+
+.cost-row {
+  display: flex;
+  border-bottom: 1px solid #3b1d0f;
+}
+
+.cost-row:last-child {
+  border-bottom: none;
+}
+
+.cost-desc {
+  flex: 1;
+  padding: 35px 40px;
+  font-size: 18px;
+  border-right: 1px solid #3b1d0f;
+}
+
+.cost-price {
+  width: 300px;
+  padding: 35px 40px;
+  font-size: 28px;
+  text-align: right;
+  letter-spacing: 2px;
+}
+
+/* Notes */
+.tax-note {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.cost-notes {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.cost-notes li {
+  margin-bottom: 15px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Title Styles */
+.table-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* The gold underline effect */
+.table-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 130px; /* Adjust to match the width of "Flow of egg" */
+    height: 3px;
+    background-color: #e4c67d;
+}
+
+/* Table Styles */
+.flow-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dcdcdc;
+}
+
+.flow-table td {
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Left Column (Numbers) */
+.step-num {
+    background-color: #fdfaf1; /* Light cream background */
+    width: 15%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Right Column (Descriptions) */
+.description {
+    background-color: #ffffff;
+    width: 85%;
+    text-align: left;
+}
+
+/* Bold text styling */
+strong {
+    font-weight: bold;
+    color: #000;
+}
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-section {
+    margin-bottom: 60px;
+}
+
+/* Header with gold underline */
+.gold-underline {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.gold-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px; /* Adjust length of underline as seen in image */
+    height: 3px;
+    background-color: #e8c88b; /* Gold color from image */
+}
+
+/* Table Styles */
+.flow-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dcdcdc;
+}
+
+.flow-table td {
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.step-num {
+    background-color: #fef9eb; /* Light cream/yellow background */
+    width: 80px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Text block styles */
+p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.citation {
+    display: block;
+    margin-top: 10px;
+    color: #4a3c31;
+}
+
+/* List styles */
+.bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: #000;
+    font-weight: bold;
+}
