@@ -985,3 +985,290 @@ nav.header {
     text-align: center;
  justify-content: center;
 }
+/* =======About2========
+///////////////////// */
+.stats-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.stats-title {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, #f5c16c, #e6a84a);
+    margin: 0 auto 60px;
+}
+
+.table-wrapper {
+    border: 1px solid #cfcfcf;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.stats-table tr {
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.stats-table tr:last-child {
+    border-bottom: none;
+}
+
+.stats-table td {
+    padding: 22px 30px;
+    font-size: 18px;
+}
+
+.stats-table .label {
+    width: 40%;
+    background: #fff9ec;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.highlight {
+    background: #cfcfcf;
+    padding: 4px 8px;
+}
+.chart-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.title-line {
+    width: 300px;
+    height: 2px;
+    background: #f0a400;
+    margin: 12px auto 30px;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.blue { background: #9fd3f6; }
+.pink { background: #ffb6c8; }
+
+.chart {
+    display: flex;
+    position: relative;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    height: 400px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    text-align: center;
+}
+
+.bar {
+    width: 45px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+}
+
+.bar span {
+    position: absolute;
+    top: -22px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.group p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Section */
+.treatment-results {
+    background: #fff;
+    padding: 80px 0 60px;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 160px;
+    height: 4px;
+    margin: 0 auto 60px;
+    background: linear-gradient(to right, #f4d27a, #f2a07b);
+}
+
+/* Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid #cfcfcf;
+}
+
+.results-table tr {
+    border-bottom: 1px solid #cfcfcf;
+}
+
+/* Left column */
+.results-table .label {
+    width: 40%;
+    background: #fff8e8;
+    padding: 35px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #7a3a1a;
+}
+
+/* Right column */
+.results-table .value {
+    width: 60%;
+    padding: 35px 40px;
+    font-size: 18px;
+    background: #ffffff;
+    color: #000;
+}
+
+/* Gray rows */
+.results-table .gray {
+    background: #d9d9d9;
+}
+
+/* Highlight numbers */
+.results-table .highlight {
+    color: #8b2f1a;
+    font-weight: 600;
+}
+/* =====Medical====== */
+/* //////////////////////// */
+.pgt-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pgt-page h2 {
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
+}
+
+.pgt-page h3 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.pgt-page p {
+  margin-bottom: 16px;
+}
+
+.pgt-page ul, .pgt-page ol {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.pgt-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.pgt-page th,
+.pgt-page td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+}
+
+.pgt-page th {
+  background: #f9f9f9;
+  text-align: left;
+  width: 40%;
+}
+
+.stats-images {
+
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.stat-image {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  color: #666;
+  font-size: 14px;
+}
+.banner-medical{
+    width: 100%;
+}
